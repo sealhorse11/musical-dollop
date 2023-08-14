@@ -58,10 +58,13 @@ int main()
             curr_cap = capacity[i];
             cap_values.insert(capacity[i]);
         }
-    }
 
-    cap_info[curr_cap] = num;
-    cap_values.insert(capacity[k - 1]);
+        if (i == k - 1)
+        {
+            cap_info[curr_cap] = num;
+            cap_values.insert(capacity[k - 1]);
+        }
+    }
 
     long long int ans = 0;
 
