@@ -15,7 +15,7 @@ struct jewel
     {
         if (this->value == other.value)
         {
-            return this->weight < other.value;
+            return this->weight < other.weight;
         }
         return this->value > other.value;
     }
@@ -58,13 +58,8 @@ int main()
             curr_cap = capacity[i];
             cap_values.insert(capacity[i]);
         }
-
-        if (i == k - 1)
-        {
-            cap_info[curr_cap] = num;
-            cap_values.insert(capacity[k - 1]);
-        }
     }
+    cap_info[curr_cap] = num;
 
     long long int ans = 0;
 
